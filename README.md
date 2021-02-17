@@ -1,3 +1,3 @@
-![banner]/REGGAE/REGGAE_banner.png 
+![banner](REGGAE_banner.png)
 # REGGAE 
 
