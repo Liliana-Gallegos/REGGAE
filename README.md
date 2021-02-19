@@ -1,20 +1,48 @@
 ![banner](REGGAE_banner.png)
+===
+
 # REGGAE 
 Regression Generator and Analyzer
 
 Allows user to run statistical analysis on .csv datasets using the R programming language and free software environment.
+Statistical diagnostics include:
 
-The program produces a regression model through linear or random forest algorithms. Statistical diagnostics include:
-
-  * ANOVA analysis
+  * Multivariate Linear or Random Forest (RF) regression models 
+  * feature selection (e.g., full, stepwise, dredge, or minimal feature correlation)
   * pairwise correlations
-  * feature selection
-  * QSAR criteria for an acceptable model
   * cross validation analysis (e.g., q<sup>2</sup>, Leave-One-Out CV, K-fold CV, and external validation R<sup>2</sup> values)
+  * QSAR criteria for an acceptable model
   * principal component analysis (PCA)
   * build scaled/unscaled train and test sets (e.g., random or Universal training set)
+  * ANOVA analysis
+  * and, plots for selected analysis.
+
 
 ### Features
+The program produces a linear regression model by default by building the model (or specifying the varibles to include in the model):
+ * `-b` or `--buildmodel` 
+
+Or, to build a linear model using the feature selection process:
+ * `-m` or `--model` - Options include: full, stepwise, dredge, or mincorr. Mincorr requires `-c` option with specified correlation value. 
+To include a Random Forest model or an optimized paramerized RF model, select options respectively: rforest or opt-forest with specified variables using `-b`.
+ 
+Arguments for statistical analysis include: 
+ * `-c` or `--corrplot` for variable correlations. Requires a value between 0 and 1.
+ * `-q` or `--crossvalidation` for all CV analysis.
+ * `-d` or `--diagnostics` for F-value comparisons on full and reduced model, QSAR Test criteria, and collinearity diagnostics.
+ * `-p` or `--pca` for principal component analysis and grouping with k-means clustering. Requires number of clusters. Can specify number of PCs with second number. (e.g., 4,3 gives 4 clusters, 3 components)
+ * `-r` or `--randsample` for 
+
+Additional argument specifications include:
+ * `-i` or `--inputfile`
+ * `-o` or `--outputfile`
+ * `-y` or `--yresponse`
+ * `-x` or `--extdata`
+ * `-e` or `--exportdata`
+ * `-s` or `--seed`
+ * `-K` or `--Kfoldvalue`
+ * `-v` or `--verbose`
+ * `-h` or `--help` 
 
 
 ### Examples 
