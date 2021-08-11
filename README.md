@@ -27,7 +27,7 @@ Or, to build a linear model using the feature selection process:
 To include a Random Forest model or an optimized paramerized RF model, select options respectively: rforest or opt-forest with specified variables using `-b`.
  
 Arguments for statistical analysis include: 
- * `-c` or `--corrplot` for variable correlations. Requires a value between 0 and 1.
+ * `-c` or `--corrplot` for variable correlations. Requires a value between 0 and 1. NOTE: Corrplot is not displaying any text labels. Still can obtain correlation values. 
  * `-q` or `--crossvalidation` for all CV analysis.
  * `-d` or `--diagnostics` for F-value comparisons on full and reduced model, QSAR Test criteria, and collinearity diagnostics.
  * `-p` or `--pca` for principal component analysis and grouping with k-means clustering. Requires number of clusters. Can specify number of PCs with second number. (e.g., 4,3 gives 4 clusters, 3 components)
