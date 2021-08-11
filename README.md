@@ -50,9 +50,22 @@ Additional argument specifications include:
 
 
 ### Install
+1. Create a new conda environment with all the r-essentials conda packages built from CRAN:
+   `conda create -n r_env r-essentials r-base`
+   
+2. Activate the r_env:
+   `conda activate r_env`
+   Note: To list the r packages already installed in r_env: `conda list`
+   
+3. Install all packages required for REGGAE with conda:
+   `conda install --yes --file requirements.txt`
+   
+4. Confirm by running REGGAE help options:
+   `Rscript reggae.r -h`
 
 
 ### Dependencies
-
+Anaconda installation required for r packages installation. 
+All available r packages with conda: https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/
 
 ### References
