@@ -649,7 +649,7 @@ reggae_plot <- function(model) {
           #subtitle = paste("y = ", paste( sprintf("%s",names(coefficients(model)[-1])), collapse=" + ") ),
           caption = paste("y = ", round(coefficients(model)[1],2), " + ",
                           paste( sprintf("%.2f * %s",coefficients(model)[-1],names(coefficients(model)[-1])), collapse=" +\n")) )  +
-    theme_bw() + theme(plot.title = element_text(hjust = 0.5), legend.title = element_blank()) +
+    theme_bw() + theme(plot.title = element_text(family='Helvetica', hjust = 0.5), legend.title = element_blank()) +
     stat_smooth(method = "lm", col = "black") +
     scale_color_manual(values=c("#E69F00", "#999999", "#56B4E9")); q_plot
   # Cross Validation Plot
@@ -747,7 +747,7 @@ if ( opt$verbose ){
     print(summary_best1)
     reggae_plot(model)
     cat("\no Regression plot(s) saved in working file. \n")
-    ggsave("REGGAE-MV-linear-plot.png",dpi=300, width = 9, height = 8)
+    ggsave("REGGAE-MV-linear-plot.pdf",dpi=300, width = 9, height = 8)
 
     if (opt$model == "rforest") {
       cat('\no Random Forest model with SELECTED features:')
@@ -762,7 +762,7 @@ if ( opt$verbose ){
         labs( title = paste("Random Forest Model "),
               caption = paste("mtry = ", signif(opt_model$mtry) , "\nntree = ", signif(opt_model$ntree) , "\n R2-train = ", signif(tr.rsq[1],2), "\nRMSE-train = ", signif(tr.rmse[1], 2),
                               "\nNumber of Samples = ", (nrow(df)) )) +
-        theme_bw() + theme(plot.title = element_text(hjust = 0.5), legend.title = element_blank()) +
+        theme_bw() + theme(plot.title = element_text(family='Helvetica',hjust = 0.5), legend.title = element_blank()) +
         stat_smooth(method = "lm", col = "black") +
         scale_color_manual(values=c("#E69F00", "#999999", "#56B4E9"))
       if (opt$extdata != FALSE){
@@ -789,7 +789,7 @@ if ( opt$verbose ){
                                   "\nR2-test = ", signif(tt.rsq[1], 2), "\nRMSE-test = ", signif(tt.rmse[1], 2),
                                   "\nR2-val = ", signif(val.rsq[1], 2), "\nRMSE-val = ", signif(val.rmse[1], 2), "\nNumber of Samples = ", (nrow(df)) )); rforest_plot_val }
         } else { rforest_plot }
-      ggsave("REGGAE-RF-plot.png",dpi=300, width = 9, height = 8)}
+      ggsave("REGGAE-RF-plot.pdf",dpi=300, width = 9, height = 8)}
 
     if (opt$model == "opt-rforest") {
       cat('\no Optimal Random Forest model with SELECTED features:')
@@ -804,7 +804,7 @@ if ( opt$verbose ){
         labs( title = paste("Random Forest Model "),
               caption = paste("mtry = ", signif(opt_model$mtry) , "\nntree = ", signif(opt_model$ntree) , "\n R2-train = ", signif(tr.rsq[1],2), "\nRMSE-train = ", signif(tr.rmse[1], 2),
                               "\nNumber of Samples = ", (nrow(df)) )) +
-        theme_bw() + theme(plot.title = element_text(hjust = 0.5), legend.title = element_blank()) +
+        theme_bw() + theme(plot.title = element_text(family='Helvetica', hjust = 0.5), legend.title = element_blank()) +
         stat_smooth(method = "lm", col = "black") +
         scale_color_manual(values=c("#E69F00", "#999999", "#56B4E9"))
       if (opt$extdata != FALSE){
@@ -831,14 +831,14 @@ if ( opt$verbose ){
                                   "\nR2-test = ", signif(tt.rsq[1], 2), "\nRMSE-test = ", signif(tt.rmse[1], 2),
                                   "\nR2-val = ", signif(val.rsq[1], 2), "\nRMSE-val = ", signif(val.rmse[1], 2), "\nNumber of Samples = ", (nrow(df)) )); rforest_plot_val }
         } else { rforest_plot }
-      ggsave("REGGAE-RF-plot.png",dpi=300, width = 9, height = 8)} }
+      ggsave("REGGAE-RF-plot.pdf",dpi=300, width = 9, height = 8)} }
 
   if ( opt$model != FALSE && opt$model != "rforest"){
     cat('\no Linear regression model: \n')
     print(summary_best1)
     reggae_plot(model)
     cat("\no Regression plot saved in working file. \n")
-    ggsave("REGGAE-MV-linear-plot.png",dpi=300) # , width = 9, height = 8
+    ggsave("REGGAE-MV-linear-plot.pdf",dpi=300) # , width = 9, height = 8
     if (exists("top_five")) {
       cat('\no DREDGE top 5 results: \n')
       print(top_five)
