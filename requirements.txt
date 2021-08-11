@@ -8,3 +8,7 @@ r-car
 r-ggplot2
 r-metrics
 r-caret
+r-r1magic 
+r-rcolorbrewer
+r-scales
+r-png
