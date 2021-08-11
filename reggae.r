@@ -196,7 +196,7 @@ if ( opt$randsample == 0 ){
         set = na.omit(df_pca[km$clust==clust[i],])
         cat("\n  Cluster ",clust[i], "set: ", nrow(set), "samples")
         assign( paste(i) , row.names(set) )
-        if (opt$verbose == TRUE) { cat("\n  Set Samples: ",as.numeric(get(paste(i))), "\n") }
+        if (opt$verbose == TRUE) { cat("\n  Set Samples: ", get(paste(i)), "\n") }
         set.seed(opt$seed)
         i_list <- as.numeric(match(get(paste(i)), rownames(df_pca)))
         index[[i]] <- sample(i_list, (opt$randsample)*length(get(paste(i))), replace = FALSE) }; cat("\n")
