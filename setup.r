@@ -19,5 +19,5 @@ InsPack <- function(pack) {
     } else  { cat('\n Package already installed: ', pack[i], '\n') } 
   }
 }
-pack <- c("optparse", "corrplot", "bindr", "MuMIn", "cvq2", "dplyr","car", "ggplot2", "caret", "Metrics", "magic" )  # "R1magic", "DEMOVA"
+pack <- c("optparse", "corrplot", "bindr", "MuMIn", "cvq2", "dplyr","car", "ggplot2", "caret", "Metrics")  # "R1magic", "DEMOVA",  "magic" 
 InsPack(pack)
