@@ -846,7 +846,7 @@ if ( opt$verbose ){
     }}
 
   if ( opt$diagnostics != FALSE){
-    png('Diagnostics-plot-REGGAE.png')
+    pdf('Diagnostics-plot-REGGAE.pdf')
     par(mfrow=c(2,2))
     plot(model, which=c(1:2,4:5) , width = 300, height = 400, pointsize = 12, units='mm', res = 300)
     dev.off()  }
@@ -856,17 +856,17 @@ if ( opt$verbose ){
     print(pca_sum)
     print(loadings(pca_sum))
 
-    png('PCA-scree-components-plot-REGGAE.png')
+    pdf('PCA-scree-components-plot-REGGAE.pdf')
     plot(pca, type='l', main="PCs Analysis") # verbose
     dev.off()
 
-    png('PCA-clusters-REGGAE.png')
+    pdf('PCA-clusters-REGGAE.pdf')
     palette(alpha(brewer.pal(9,'Set1'), 0.5))
     # plot(comp, col=km$clust, pch=16) #verbose show all PCs requested
     plot(pc_only$x[,1:2], col=km$clust, pch=16) #verbose only show PC1 vs PC2
     dev.off()
 
-    png('PCA-scree-clusters-plot-REGGAE.png')
+    pdf('PCA-scree-clusters-plot-REGGAE.pdf')
     plot(1:length(pca_sum[["sdev"]]), ssw, type="b", xlab="Number of Clusters",
          ylab="Within groups sum of squares", main="Cluster Analysis")
     dev.off()}
@@ -884,7 +884,7 @@ if ( opt$verbose ){
     cat('\no Correlation table for all variables: \n')
     print(corr)
     cat("\no Correlation plot saved in working file. \n")
-    png(file = "REGGEA-correlation-plot.png",width = 200, height = 200, pointsize = 18, units='mm', res = 300)
+    pdf(file = "REGGEA-correlation-plot.pdf",width = 200, height = 200, pointsize = 18, units='mm', res = 300)
     corrplot <- corrplot(corr, p.mat = res$p, sig.level = c(.001, .01, .05), pch.cex = .7,
                          insig = "label_sig",
                          pch.col = "white",
