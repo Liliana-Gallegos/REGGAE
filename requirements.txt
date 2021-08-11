@@ -1,0 +1,10 @@
+r-optparse
+r-corrplot
+r-bindr
+r-mumin
+r-cvq2
+r-dplyr
+r-car
+r-ggplot2
+r-metrics
+r-caret
