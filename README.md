@@ -69,6 +69,6 @@ Anaconda installation required for r packages installation.
 All available r packages with conda: https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/
 
 ### References
-(1) QSAR criteria: (a) Tropsha, A.; Gramatica, P.; Gombar, V. K. QSAR Comb. Sci. 2003, 22, 69. (b) Dearden, J.C.; Cronin M.T.D.; Kaiser, K.L.E. How not to develop a quantitative structure–activity or structure–property relationship (QSAR/QSPR). SAR QSAR Environ. Res. 2009, 20, 241–266.
-(2) UTS: Zahrt, A. F.; Henle, J. J.; Rose, B. T.; Wang, Y.; Darrow, W. T.; Denmark, S. E. Science 2019, 363, eaau5631.
+1. QSAR criteria: (a) Tropsha, A.; Gramatica, P.; Gombar, V. K. QSAR Comb. Sci. 2003, 22, 69. (b) Dearden, J.C.; Cronin M.T.D.; Kaiser, K.L.E. How not to develop a quantitative structure–activity or structure–property relationship (QSAR/QSPR). SAR QSAR Environ. Res. 2009, 20, 241–266.
+2. UTS: Zahrt, A. F.; Henle, J. J.; Rose, B. T.; Wang, Y.; Darrow, W. T.; Denmark, S. E. Science 2019, 363, eaau5631.
 
