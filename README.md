@@ -45,6 +45,11 @@ Additional argument specifications include:
  * `-h` or `--help` 
 
 
+
+### Pending issues
+* The pairwise heatmap correlation plot from `-c` currently not showing any text on plot. 
+* Outlier testing analysis from `-d` is removed. Update soon.
+
 ### Examples 
 
 
