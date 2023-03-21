@@ -310,7 +310,7 @@ V    0.14 -0.61  1.00
 
 o Correlation plot saved in working file. 
 ```
-Using the `-v` option saves the pearson correlation plot within the working folder as REGGEA-correlation-plot.png.
+Using the `-v` option saves the plot within the working folder as REGGEA-correlation-plot.png.
 <img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/REGGEA-correlation-plot.png" style="margin:auto" width="500"/>
 
 #### * Diagnostics plot
@@ -342,6 +342,11 @@ IV. Collinearity diagnostics for reduced model:
 Diagnostics plot includes: Residual vs Fitted, Normal Q-Q, Cook's distance, and Residuals vs Leverage plots.
 <img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/REGGAE-diagnostics-plot.png" style="margin:auto" width="500"/>
 
+#### * PCA plot 
+Using the `-p 5,2` option requests running principal componenet analysis with k-means clustering using 5 clusters and 2 components. 
+Using the `-v` option gives the PCA-clusters and Scree plots (or elbow plots) for each the clusters and components. Also, within the terminal output, the script returns the loadings. 
+Showing only the PCA clustering plot. See the [scree plots here](https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/).
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/PCA-clusters-REGGAE.png" style="margin:auto" width="500"/>
 
 ### References
 1. QSAR criteria: (a) Tropsha, A.; Gramatica, P.; Gombar, V. K. QSAR Comb. Sci. 2003, 22, 69. (b) Dearden, J.C.; Cronin M.T.D.; Kaiser, K.L.E. How not to develop a quantitative structure–activity or structure–property relationship (QSAR/QSPR). SAR QSAR Environ. Res. 2009, 20, 241–266.
