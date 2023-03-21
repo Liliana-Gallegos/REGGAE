@@ -75,7 +75,7 @@ Using the [20solvents.csv dataset](https://github.com/Liliana-Gallegos/REGGAE/tr
 
 To save the Terminal output as a text file or see any plot analysis, `-v` option is required.
 
-* Perform a multivariate regression with a (i) Forward-stepwise feature selection and (ii) Random 70 Train and 30 Test split.
+#### 1. Perform a multivariate regression with a (i) Forward-stepwise feature selection and (ii) Random 70 Train and 30 Test split.
 Other feature selection options are available. Note that dredge option takes time and therefore should be executed with small number of featuers. 
 ```
 Rscript reggae.r -i 20solvents.csv -y Exp_dG -m stepwise -r 0.7
@@ -105,7 +105,7 @@ o Forward Step-wise features selected for linear regression:
    RMSE-train =  0.25
 ```
 
-* Perform a multivariate regression with a (i) manual feature selection, (ii) predefined split selection, and (iii) cross-validation. 
+#### 2. Perform a multivariate regression with a (i) manual feature selection, (ii) predefined split selection, and (iii) cross-validation. 
 The split has been defined as Train and Test within the 12kclusters column in the dataset. Therefore, the script will pick up the column with two catagorical variables. Note: Error can occur if there are multiple columns with strings or characters. To execute this option, `-r` is set to 0. 
 ```
 Rscript reggae.r -i 20solvents.csv -y Exp_dG -b Sig2,V -r 0 -q -v
@@ -292,11 +292,11 @@ q^2: 			0.7592
 ******************END*****************
 ```
 
-* Visualization generated:
-* Regression plot
+#### 3. Visualization generated:
+#### * Regression plot
 
 
-* Types of Diagnostics
+#### * Types of Diagnostics
 Adding the `-d` option outputs: QSAR analysis for the Test set and collinearity analysis in the first section (withou `-v` option).
 Using the `-v` option saves the plot within the working folder (REGGAE-diagnostics-plot.png).
 ```
