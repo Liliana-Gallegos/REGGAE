@@ -294,14 +294,28 @@ q^2: 			0.7592
 #### 3. Visualization generated:
 #### * Regression plot
 Regression plot is saved in working folder as REGGAE-MV-linear-plot.png.
-<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
 
 #### * Pearson Correlation plot
-Correlation plot is saved as 
+Adding the `-c 0.5` option outputs: pairwise correlations between features > 0.5 
+```
+...
+********** DETAILED RESULTS **********
+...
+o Correlation table for all variables: 
+        y  Sig2     V
+y    1.00  0.55  0.14
+Sig2 0.55  1.00 -0.61
+V    0.14 -0.61  1.00
+
+o Correlation plot saved in working file. 
+```
+Using the `-v` option saves the pearson correlation plot within the working folder as REGGEA-correlation-plot.png.
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/REGGEA-correlation-plot.png" style="margin:auto" width="500"/>
 
 #### * Diagnostics plot
 Adding the `-d` option outputs: QSAR analysis for the Test set and collinearity analysis in the first section (withou `-v` option).
-Using the `-v` option saves the plot within the working folder (REGGAE-diagnostics-plot.png).
+Using the `-v` option saves the plot within the working folder as REGGAE-diagnostics-plot.png.
 ```
 o Diagnostic results:
 I. Reduced model significance:  
@@ -326,7 +340,7 @@ IV. Collinearity diagnostics for reduced model:
   No collinearity found within model. VIF < 4 
 ```
 Diagnostics plot includes: Residual vs Fitted, Normal Q-Q, Cook's distance, and Residuals vs Leverage plots.
-<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-diagnostics-plot.png" style="margin:auto" width="500"/>
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/REGGAE-diagnostics-plot.png" style="margin:auto" width="500"/>
 
 
 ### References
