@@ -293,9 +293,7 @@ q^2: 			0.7592
 
 #### 3. Visualization generated:
 #### * Regression plot
-<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
-<p style="text-align: center">
-</p>
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-MV-linear-plot.png" style="margin:auto" width="500" align="center"/>
 
 
 #### * Types of Diagnostics
