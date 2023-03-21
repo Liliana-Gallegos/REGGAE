@@ -73,7 +73,6 @@ All available r packages with conda: https://docs.anaconda.com/anaconda/packages
 ### Example
 Using the [20solvents.csv dataset](https://github.com/Liliana-Gallegos/REGGAE/tree/master/Example_workflow) obtained from the multivariate analysis study on solvent properties for an improved protocol for the Base-Catalyzed Anti-Markovnikov Alcohol Addition Reaction. [See publication here!](https://doi.org/10.1021/jacs.1c13397) Full dataset can be found in the [Solvent_regression_analysis GitHub Repo](https://github.com/Liliana-Gallegos/Solvent_regression_analysis).
 
-To save the Terminal output as a text file or see any plot analysis, `-v` option is required.
 
 #### 1. Perform a multivariate regression with a (i) Forward-stepwise feature selection and (ii) Random 70 Train and 30 Test split.
 Other feature selection options are available. Note that dredge option takes time and therefore should be executed with small number of featuers. 
@@ -294,6 +293,9 @@ q^2: 			0.7592
 
 #### 3. Visualization generated:
 #### * Regression plot
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
+<p style="text-align: center">
+</p>
 
 
 #### * Types of Diagnostics
