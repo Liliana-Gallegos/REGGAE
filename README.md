@@ -293,10 +293,13 @@ q^2: 			0.7592
 
 #### 3. Visualization generated:
 #### * Regression plot
-<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-MV-linear-plot.png" style="margin:auto" width="500" align="center"/>
+Regression plot is saved in working folder as REGGAE-MV-linear-plot.png.
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
 
+#### * Pearson Correlation plot
+Correlation plot is saved as 
 
-#### * Types of Diagnostics
+#### * Diagnostics plot
 Adding the `-d` option outputs: QSAR analysis for the Test set and collinearity analysis in the first section (withou `-v` option).
 Using the `-v` option saves the plot within the working folder (REGGAE-diagnostics-plot.png).
 ```
@@ -322,6 +325,8 @@ IV. Collinearity diagnostics for reduced model:
 
   No collinearity found within model. VIF < 4 
 ```
+Diagnostics plot includes: Residual vs Fitted, Normal Q-Q, Cook's distance, and Residuals vs Leverage plots.
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/png_files/REGGAE-diagnostics-plot.png" style="margin:auto" width="500"/>
 
 
 ### References
