@@ -338,25 +338,25 @@ if (opt$buildmodel != FALSE){
           '\n   RMSE = ', signif(val.rmse[1],2), '\n\n') }}
     
     else if (opt$model == "rforest" && y_var == TRUE){
-    print('RFOREST')
-    set.seed(opt$seed)
-    opt_model <- randomForest(y ~., data = data, importance = TRUE) #} 
-    
-    tr.rsq=double(1); tr.rmse=double(1); tt.rsq=double(1); tt.rmse=double(1); val.rsq=double(1); val.rmse=double(1)
-    RF_predicted_tr <- predict(opt_model, data[-1]) 
-    tr.rsq[1] = cor(data$y, RF_predicted_tr)^2 #R2-train pred
-    tr.rmse[1] = rmse(data$y, RF_predicted_tr) #RMSE-train pred
-    train.frame = tibble(RF_predicted_tr, data$y) 
-    cat('\n\no Random Forest model with SELECTED features:')
-    cat('\n  R2-train = ', signif(tr.rsq[1],2), 
-        '\n   RMSE = ', signif(tr.rmse[1],2))
+      print('RFOREST')
+      set.seed(opt$seed)
+      opt_model <- randomForest(y ~., data = data, importance = TRUE) #} 
+      
+      tr.rsq=double(1); tr.rmse=double(1); tt.rsq=double(1); tt.rmse=double(1); val.rsq=double(1); val.rmse=double(1)
+      RF_predicted_tr <- predict(opt_model, data[-1]) 
+      tr.rsq[1] = cor(data$y, RF_predicted_tr)^2 #R2-train pred
+      tr.rmse[1] = rmse(data$y, RF_predicted_tr) #RMSE-train pred
+      train.frame = tibble(RF_predicted_tr, data$y) 
+      cat('\n\no Random Forest model with SELECTED features:')
+      cat('\n  R2-train = ', signif(tr.rsq[1],2), 
+          '\n   RMSE = ', signif(tr.rmse[1],2), '\n')
     if (nrow(data_tt) > 0){ 
       RF_predicted_tt <- predict(opt_model, data_tt[-1])
       tt.rsq[1] = cor(data_tt$y, RF_predicted_tt)^2 #R2-test pred
       tt.rmse[1] = rmse(data_tt$y, RF_predicted_tt) #RMSE-test pred 
       test.frame = tibble(RF_predicted_tt, data_tt$y)
       cat('\n  R2-test = ', signif(tt.rsq[1],2), 
-          '\n   RMSE = ', signif(tt.rmse[1],2)) } 
+          '\n   RMSE = ', signif(tt.rmse[1],2), '\n') } 
     if (length(data_presplit) > 2){ 
       RF_predicted_val <- predict(opt_model, data_val[-1])
       val.rsq[1] = cor(data_val$y, RF_predicted_val)^2 #R2-val pred
