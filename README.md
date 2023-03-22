@@ -137,15 +137,20 @@ o Linear regression model with SELECTED features:
    RMSE-train =  0.29 
 
 
+o Correlations > 0.5 on Full dataset between variables: 
+  y - Sig2 = 0.55 
+  Sig2 - V = -0.61 
+
+
 o Cross Validation for model ( k =  5 ): 
   LOO-q2 (train) =  0.5 
-  Iteration  1 : Kfold-q2 =  0.55 
-  Iteration  2 : Kfold-q2 =  0.61 
-  Iteration  3 : Kfold-q2 =  0.39 
-  Iteration  4 : Kfold-q2 =  0.42 
-  Iteration  5 : Kfold-q2 =  0.55 
-  Avg Kfold-q2 (train) =  0.5 ( +/- 0.09 )
-   RMSE =  0.38 
+  Iteration  1 : Kfold-q2 =  0.44 
+  Iteration  2 : Kfold-q2 =  0.45 
+  Iteration  3 : Kfold-q2 =  0.59 
+  Iteration  4 : Kfold-q2 =  0.52 
+  Iteration  5 : Kfold-q2 =  0.61 
+  Avg Kfold-q2 (train) =  0.52 ( +/- 0.08 )
+   RMSE =  0.35 
   q2 (test) =  0.76 
    RMSE-test =  0.22 
 ```
