@@ -300,7 +300,7 @@ q^2: 			0.7592
 #### 3. Visualization generated:
 #### * Regression plot
 Regression plot is saved in working folder as REGGAE-MV-linear-plot.png.
-<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
+<img src="https://github.com/Liliana-Gallegos/REGGAE/blob/master/Example_workflow/Example_REGGAE-MV-linear-plot.png" style="margin:auto" width="500"/>
 
 #### * Pearson Correlation plot
 Adding the `-c 0.5` option outputs: pairwise correlations between features > 0.5 
