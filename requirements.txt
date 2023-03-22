@@ -12,3 +12,4 @@ r-r1magic
 r-rcolorbrewer
 r-scales
 r-png
+r-tidyselect
