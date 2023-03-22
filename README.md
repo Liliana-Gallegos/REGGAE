@@ -47,7 +47,8 @@ Additional argument specifications include:
 
 ### Pending issues
 * Outlier testing analysis from `-d` is removed. Update soon.
-* Using the external dataset option `-x` is currently removed. Update soon.
+* Using the external dataset option `-x` is currently underconstruction. Results are unreliable. 
+  Instead include additional label in categorical column: Train, Test, Validation
 
 
 ### Install
@@ -56,7 +57,7 @@ Additional argument specifications include:
    
 2. Activate the r_env:
    `conda activate r_env`
-   Note: To list the r packages already installed in r_env: `conda list`
+  * Note: To list the r packages already installed in r_env: `conda list`
    
 3. Install all packages required for REGGAE with conda:
    `conda install --yes --file requirements.txt`
