@@ -261,9 +261,9 @@ r^2: 			0.6724
 #Elements Test Set: 		3 (-1)
 
 mean (observed): 	0.8883
-mean (predicted): 	0.8837
-rmse (nu = 1): 		0.3816
-q^2: 			0.5530
+mean (predicted): 	0.8532
+rmse (nu = 1): 		0.3495
+q^2: 			0.6145
 
 o III. Test set validation: 
 
