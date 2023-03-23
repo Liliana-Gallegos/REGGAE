@@ -89,16 +89,16 @@ cat(' -v', as.character(opt[1]),
 cat('\n\n***** RESULTS PROVIDED BY REGGAE *****\n')
 if (opt$randsample == 0){ 
   cat("\no Using data option with pre-defined Test/Train split. \n")
-  f = sapply(df1, levels)
-  fnames = names(f)
-  for (i in 1:length(fnames)){
-    if (length(f[[fnames[i]]]) > 1) {
-      cat(' Labels: ')
-      cat_col = fnames[i]
-      cat_levels = f[[fnames[i]]]
-      cat(' ',cat_levels, '\n') }
-  } } else { df = select_if(df1, is.numeric) # select only numerical columns 
-  }
+  cat_cols = which(sapply(df1, is.factor) | sapply(df1, is.character))
+  if (length(cat_cols) == 1) {
+    cat(' Labels: ')
+    cat_col = cat_cols
+    cat_levels = unique(df1[, cat_col])   #### list the categorical variables
+    cat(' ',cat_levels, '\n')  } 
+  else {  
+    cat('  Current categorical columns: ', names(cat_cols), '\n')
+    stop('Dataframe contains multiple categorical columns. Remove extra columns to proceed with -r 0 option. \n\n') } 
+} else { df = select_if(df1, is.numeric) } # select only numerical columns 
 
 
 # Data cleaning: remove constant columns
